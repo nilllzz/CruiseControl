@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6AF588C4-8FBF-4724-A308-C2A2BE291828}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CruiseControl</RootNamespace>
+    <AssemblyName>CruiseControl</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Core</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="Content\Textures\Environment\ConfigScreen\hill.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Textures\Environment\ConfigScreen\road.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Textures\Environment\ConfigScreen\tree.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Textures\Environment\tree.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Textures\Vehicles\Reichswagen\rw_kraft.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Textures\Vehicles\Wheels\rw_wheel.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="notes.txt" />
+    <None Include="App.config" />
+    <Content Include="Content\Fonts\ConfiguratorFont.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Fonts\ConfiguratorFontSmall.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Shaders\GaussianBlur.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Fonts\CustomFont.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Fonts\CustomFontLarge.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="MonoGame.Framework.dll.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="GameDevCommon, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\GameDevCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoGame.Framework, Version=3.6.0.1625, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MonoGame.Framework.WindowsDX.3.6.0.1625\lib\net40\MonoGame.Framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NetVoltr, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\NetVoltr.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ValueTuple, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.3.1\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Content\Resources.cs" />
+    <Compile Include="GameController.cs" />
+    <Compile Include="Core.cs" />
+    <Compile Include="GameWorld\Objects\ConfigScreen\ConfigScreenProp.cs" />
+    <Compile Include="GameWorld\Objects\ConfigScreen\Road.cs" />
+    <Compile Include="GameWorld\Objects\ConfigScreen\Tree.cs" />
+    <Compile Include="GameWorld\Objects\ConfigScreen\Hill.cs" />
+    <Compile Include="GameWorld\Objects\Floor.cs" />
+    <Compile Include="GameWorld\Objects\ChunkPart.cs" />
+    <Compile Include="GameWorld\Objects\Scenery\Tree.cs" />
+    <Compile Include="GameWorld\Objects\Vehicles\Reichswagen\Kraft.cs" />
+    <Compile Include="GameWorld\Objects\Vehicles\VehicleColorProvider.cs" />
+    <Compile Include="GameWorld\Objects\Vehicles\VehicleControlSource.cs" />
+    <Compile Include="GameWorld\Objects\Vehicles\Wheels\ReichswagenWheel.cs" />
+    <Compile Include="GameWorld\Objects\Vehicles\Wheels\WheelType.cs" />
+    <Compile Include="Scenes\Configurator\ConfigOption.cs" />
+    <Compile Include="Scenes\Configurator\PreviewPosition.cs" />
+    <Compile Include="Scenes\InGame\Chunk.cs" />
+    <Compile Include="GameWorld\IObjectContainer.cs" />
+    <Compile Include="Scenes\Configurator\ConfiguratorCamera.cs" />
+    <Compile Include="Scenes\Configurator\ConfiguratorRenderer.cs" />
+    <Compile Include="Scenes\Configurator\ConfiguratorScreen.cs" />
+    <Compile Include="Scenes\Configurator\ConfiguratorWorld.cs" />
+    <Compile Include="Scenes\InGame\ColorReplacer.cs" />
+    <Compile Include="Scenes\InGame\FollowCamera.cs" />
+    <Compile Include="Scenes\InGame\NetworkClient.cs" />
+    <Compile Include="Scenes\InGame\NetworkPlayer.cs" />
+    <Compile Include="Scenes\InGame\OverviewCamera.cs" />
+    <Compile Include="Scenes\InGame\InGameRenderer.cs" />
+    <Compile Include="Scenes\InGame\InGameScreen.cs" />
+    <Compile Include="GameWorld\Objects\GameObject.cs" />
+    <Compile Include="GameWorld\Objects\Scenery\BumpyField.cs" />
+    <Compile Include="GameWorld\Objects\Scenery\Field.cs" />
+    <Compile Include="GameWorld\Objects\Street\Divider.cs" />
+    <Compile Include="GameWorld\Objects\Vehicles\Cord\C15.cs" />
+    <Compile Include="GameWorld\Objects\Vehicles\Wheels\CordWheel.cs" />
+    <Compile Include="GameWorld\Objects\Vehicles\Wheels\Wheel.cs" />
+    <Compile Include="GameWorld\Objects\Vehicles\Vehicle.cs" />
+    <Compile Include="GameWorld\Objects\Street\StraightRoad.cs" />
+    <Compile Include="GameWorld\Objects\Street\Road.cs" />
+    <Compile Include="GameWorld\Objects\Street\TwoLaneHighway.cs" />
+    <Compile Include="GameWorld\World.cs" />
+    <Compile Include="Scenes\InGame\InGameWorld.cs" />
+    <Compile Include="Scenes\IWorldScreen.cs" />
+    <Compile Include="Screen.cs" />
+    <Compile Include="ScreenManager.cs" />
+    <Compile Include="Services\GlobePosition.cs" />
+    <Compile Include="Services\GlobeProjection.cs" />
+    <Compile Include="Services\GoogleMaps.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Content\Textures\Environment\grass.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Textures\Roads\divider.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Textures\Roads\roadsurface.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Textures\Roads\twolanehighway.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Textures\Vehicles\Cord\cord_c15.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Textures\Vehicles\Wheels\cord_wheel.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

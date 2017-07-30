@@ -1,0 +1,13 @@
+﻿1475 meters across
+1000 units across
+=> 1 unit ~ 1.475 meters
+
+One part of a chunk is
+147.5 meters across
+
+111111 = 1 degree
+
+AIzaSyCFCvlyJ_Fw3V59IrPUWxuNgO74V3r5JC4
+
+https://maps.googleapis.com/maps/api/staticmap?center=Brooklyn+Bridge,New+York,NY&zoom=13&size=600x300&maptype=terrain
+&key=AIzaSyCFCvlyJ_Fw3V59IrPUWxuNgO74V3r5JC4
