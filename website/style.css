@@ -1,0 +1,119 @@
+body {
+    margin: 0 0 0 0 !important;
+    height: 100%;
+    background-color: rgb(235, 235, 235);
+    font-family: -apple-system, BlinkMacSystemFont, Roboto, Segoe UI, Oxygen, Ubuntu, Cantarell,
+        Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+.main {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    min-width: 800px;
+    width: 70%;
+    max-width: 1000px;
+    height: 100%;
+    font-family: 'Lato';
+}
+
+.heading {
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    margin-top: -440px;
+    animation: fadein 2s;
+}
+
+.imageContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+}
+
+.imageCarDrive {
+    width: 800px;
+    animation: fadein 2s;
+}
+
+.textBlock1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 520px;
+    color: white;
+    height: 320px;
+}
+
+.textBlock2 {
+    color: white;
+    min-width: 300px;
+    width: 40%;
+    padding: 20px;
+    padding-left: 0px;
+    margin-left: 5%;
+}
+
+.textBlock2 p {
+    padding: 20px;
+    margin-top: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+.textBlock3 {
+    color: white;
+    min-width: 300px;
+    width: 40%;
+    padding: 20px;
+    margin-left: 55%;
+}
+
+.textBlock3 p {
+    padding: 20px;
+    margin-top: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+.heroImageContainer {
+    padding-top: 100px;
+}
+.imageHero {
+    width: 100%;
+}
+.imageHeroEnd {
+    width: 100%;
+}
+.heroStripes {
+    background: url('content/heroStripe.png');
+    background-size: 100%;
+    height: 300px;
+}
+
+.polygonContainer {
+    z-index: -999;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+}
+#svgBar1 {
+    display: block;
+    fill: #687278;
+    height: 500px;
+    width: 100%;
+    padding-top: 600px;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.gamejolt-download-container {
+    margin-right: 20px;
+}
